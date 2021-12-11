@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Lightred: hsl(15, 100%, 70%);
+  --Softblue: hsl(195, 74%, 62%);
+  --Lightred: hsl(348, 100%, 68%);
+  --Limegreen: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Softorange: hsl(43, 84%, 65%);
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+  --black: #000000;
+  --white: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background: var(--black);
+}
+
+.main {
+  max-width: 1440px;
+  width: 90%;
+  height: 100vh;
+  background: var(--Verydarkblue);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1110px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  height: 520px;
+}
+
+.izquierdo {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil {
+  flex: 2.1;
+  background: var(--Blue);
+  border-radius: 15px;
+  z-index: 1;
+  padding: 33px 28px;
+}
+
+.perfil_img {
+  display: block;
+  width: 85px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  margin-bottom: 43px;
+}
+
+.name {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.name span {
+  color: var(--PaleBlue);
+  font-size: 1rem;
+}
+
+.temporada {
+  flex: 0.9;
+  background: var(--Darkblue);
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding: 33px 28px;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-evenly;
+  color: var(--Desaturatedblue);
+  font-weight: 300;
+}
+
+.temporada li:nth-child(2) {
+  color: var(--white);
+}
+
+.temporada::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  background-color: var(--Darkblue);
+  width: 100%;
+  height: 30px;
+  margin-left: -28px;
+}
+
+.derecho {
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.top,
+.bot {
+  flex: 1;
+  gap: 32px;
+  display: flex;
+  overflow: hidden;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  color: var(--white);
+  font-weight: 300;
+}
+
+.color {
+  flex: 1;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+}
+
+.color::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -30px;
+  background-color: inherit;
+}
+
+.color img {
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+
+.bot .color img {
+  top: -1px;
+}
+
+.info {
+  flex: 4;
+  background: var(--Darkblue);
+  border-radius: 15px;
+  z-index: 1;
+}
